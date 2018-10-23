@@ -30,7 +30,7 @@ export const changeSearchTrendList = (pagenum) => ({
 
 export const getSearchTrendList = () => {
   return (dispatch) => {
-    axios.get('/api/searchTrendList.json').then(res => {
+    axios.get('/api/header/searchTrendList.json').then(res => {
       dispatch(initSearchTrendList(res.data))
     }).catch(err => {
       console.log(err)
