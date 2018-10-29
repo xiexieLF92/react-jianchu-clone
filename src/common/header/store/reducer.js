@@ -1,12 +1,13 @@
 import { fromJS } from "immutable";
-import { SEARCH_ON_FOCUS, SEARCH_ON_BLUR, SEARCH_ON_MOVE_IN, SEARCH_ON_MOVE_OUT, INTI_SRAECH_TREND_LIST, CHANGE_SRAECH_TREND_LIST_PAGENUM } from "./actionTypes";
+import { SEARCH_ON_FOCUS, SEARCH_ON_BLUR, SEARCH_ON_MOVE_IN, SEARCH_ON_MOVE_OUT, TOGGLE_POPOVER_MODEL_SHOW, INTI_SRAECH_TREND_LIST, CHANGE_SRAECH_TREND_LIST_PAGENUM } from "./actionTypes";
 
 const defaultState = fromJS({
   onSearchFocus: false,
   moveIn: false,
   searchTrendList: [],
   totalPage: 1,
-  pageNum: 1
+  pageNum: 1,
+  popoverModelShow: false,
 })
 
 export default (state = defaultState, action) => {
@@ -19,6 +20,8 @@ export default (state = defaultState, action) => {
       return state.set("moveIn", true);
     case SEARCH_ON_MOVE_OUT: 
       return state.set("moveIn", false);
+    case TOGGLE_POPOVER_MODEL_SHOW:
+      return state.set("popoverModelShow", !state.get("popoverModelShow"));
     case INTI_SRAECH_TREND_LIST: 
       return state.merge({
         "searchTrendList": action.data,

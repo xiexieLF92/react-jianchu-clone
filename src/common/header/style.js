@@ -3,6 +3,11 @@ import LogoImg from "../../static/img/nav-logo.png";
 
 // 整个头部导航条
 export const Nav = styled.nav`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
   border-bottom: 1px solid #f0f0f0;
 `;
 // 限制宽度的头部导航条
@@ -187,7 +192,7 @@ export const NavSearchTrendtitleBtn = styled.a`
     transform-origin: center;
   }
 `
-// 
+// 热门搜索列表
 export const NavSearchTrendList = styled.li`
   display: inline-block;
   line-height: 28px;
@@ -204,4 +209,91 @@ export const NavSearchTrendList = styled.li`
       border-color: #999;
     }
   }
+`
+// popoverModelWrapper
+export const PopoverModelWrapper = styled.div`
+  position: relative;
+  height: 56px;
+  float: right;
+`
+// popoverModel
+export const PopoverModel = styled.div`
+  position: absolute;
+  top: 56px;
+  right: -10px;
+  text-align: left;
+  padding: 20px 20px 20px 24px;
+  min-width: 205px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
+  filter: drop-shadow(0 0 8px rgba(0,0,0,.1));
+  -webkit-filter: drop-shadow(0 0 8px rgba(0,0,0,.1));
+  visibility: ${ props => props.visibal ? "visible" : "hidden"};
+  opacity: ${ props => props.visibal ? 1 : 0};
+  &:before {
+    position: absolute;
+    top: -8px;
+    right: 21px;
+    content: "";
+    border: 9px solid transparent;
+    border-bottom-color: #fff;
+    border-top: none;
+  }
+  hr {
+    border: none;
+    border-bottom: 1px solid #eee;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+`
+export const SwitchMeta = styled.div`
+  padding-left: 4px;
+  margin-right: 16px;
+  font-size: 14px;
+  color: #969696;
+  line-height: 40px;
+  vertical-align: middle;
+  display: inline-block;
+  .iconfont {
+    margin-right: 5px;
+  }
+`
+export const SwitchBtnWrap = styled.div`
+  width: 100%;
+  font-size: 0;
+  &.half-switch {
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+  }
+ `
+export const SwitchBtn = styled.a`
+  display: inline-block;
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+  color: #969696;
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+  text-align: center;
+  width: 49%;
+  box-sizing: border-box;
+  &:first-child {
+    padding: 10px 13px 10px 17px;
+    border-radius: 20px 0 0 20px;
+    border-right: none;
+  }
+  &:last-child {
+    padding: 10px 17px 10px 13px;
+    border-radius: 0 20px 20px 0;
+    border-left: none;
+  }
+  &.active {
+    border-color: #6dacf4;
+    background-color: #6dacf4;
+    color: #fff;
+    box-shadow: inset 0 0 6px rgba(0,0,0,.1);
+  }
+
 `

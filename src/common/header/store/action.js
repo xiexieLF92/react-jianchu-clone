@@ -1,4 +1,4 @@
-import { SEARCH_ON_FOCUS, SEARCH_ON_BLUR, SEARCH_ON_MOVE_IN, SEARCH_ON_MOVE_OUT, INTI_SRAECH_TREND_LIST, CHANGE_SRAECH_TREND_LIST_PAGENUM } from "./actionTypes";
+import { SEARCH_ON_FOCUS, SEARCH_ON_BLUR, SEARCH_ON_MOVE_IN, SEARCH_ON_MOVE_OUT, TOGGLE_POPOVER_MODEL_SHOW, INTI_SRAECH_TREND_LIST, CHANGE_SRAECH_TREND_LIST_PAGENUM } from "./actionTypes";
 import axios from "axios";
 
 export const searchOnFocus = () => ({
@@ -15,6 +15,10 @@ export const searchOnMoveIn = () => ({
 
 export const searchOnMoveOut = () => ({
   type: SEARCH_ON_MOVE_OUT
+})
+
+export const togglePopoverModelShow = () => ({
+  type: TOGGLE_POPOVER_MODEL_SHOW
 })
 
 export const initSearchTrendList = (data) => ({
