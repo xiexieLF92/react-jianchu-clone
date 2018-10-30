@@ -31,7 +31,7 @@ class Footer extends Component {
             <img src="http://cdn2.jianshu.io/assets/web/wxb-a216456895eb66c17497dbd3da443cf8.png" alt=""/>
           </a>
           <a href="">举报电话：021-34770013 / </a>
-          <a href>
+          <a href="">
             <img src="http://cdn2.jianshu.io/assets/web/zggsrz-5695587dccf490ca3e651f4228f7479e.png" alt=""/>
           </a>
         </CopyRightInfo>
