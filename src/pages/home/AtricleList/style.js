@@ -7,6 +7,7 @@ export const CutOffRuleLine = styled.hr`
 `
 export const ArticleListItem = styled.div`
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
