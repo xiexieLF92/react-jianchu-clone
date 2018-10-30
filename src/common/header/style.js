@@ -9,6 +9,7 @@ export const Nav = styled.nav`
   width: 100%;
   background: #fff;
   border-bottom: 1px solid #f0f0f0;
+  z-index: 100;
 `;
 // 限制宽度的头部导航条
 export const WidthLimit = styled.div`
