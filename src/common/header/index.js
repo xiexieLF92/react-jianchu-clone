@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { searchOnFocus, searchOnBlur, searchOnMoveIn, searchOnMoveOut, togglePopoverModelShow, getSearchTrendList, changeSearchTrendList } from "./store/action";
+import { headerAction } from "./store";
 import { CSSTransition } from "react-transition-group";
 
 import {
@@ -162,13 +162,13 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   handleOnFocus(list) {
-    dispatch(searchOnFocus())
+    dispatch(headerAction.searchOnFocus())
     if(list.size === 0) {
-      dispatch(getSearchTrendList())
+      dispatch(headerAction.getSearchTrendList())
     }
   },
   handleOnBlur() {
-    dispatch(searchOnBlur())
+    dispatch(headerAction.searchOnBlur())
   },
   changePageNum(rotateRef, totalPage, pageNum) {
     let originDeg = rotateRef.style.transform.replace(/[^0-9]/ig,"")
@@ -179,20 +179,20 @@ const mapDispatchToProps = (dispatch) => ({
     }
     rotateRef.style.transform = `rotate(${360 + originDeg}deg)`;
     if(pageNum < totalPage) {
-      dispatch(changeSearchTrendList(pageNum+1))
+      dispatch(headerAction.changeSearchTrendList(pageNum+1))
     } else {
-      dispatch(changeSearchTrendList(1))
+      dispatch(headerAction.changeSearchTrendList(1))
     }
   },
   handleOnMouseEnter() {
-    dispatch(searchOnMoveIn())
+    dispatch(headerAction.searchOnMoveIn())
   },
   handleOnMouseLeave() {
-    dispatch(searchOnMoveOut())
+    dispatch(headerAction.searchOnMoveOut())
   },
   togglePopoverModelShow(e) {
     e.stopPropagation();
-    dispatch(togglePopoverModelShow())
+    dispatch(headerAction.togglePopoverModelShow())
   }
 })
 
