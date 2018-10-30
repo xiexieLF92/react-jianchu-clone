@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import {
   CarouselBannerWrapper
-} from "../style";
+} from "./style";
 
 class CarouselBanner extends Component {
 

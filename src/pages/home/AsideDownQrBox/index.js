@@ -5,7 +5,7 @@ import {
   AsideDownWrapper,
   AsideDownInfo,
   BigQrCodeBox
-} from "../style";
+} from "./style";
 
 class AsideDownQrBox extends Component {
   render() {

@@ -10,7 +10,7 @@ import {
   ArticleListContentDesc,
   ArticleListContentMeta,
   ArticleListGetMore
-} from "../style";
+} from "./style";
 
 class ArticleList extends Component {
 

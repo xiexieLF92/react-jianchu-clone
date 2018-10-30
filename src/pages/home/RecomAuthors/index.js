@@ -9,7 +9,7 @@ import {
   RecomAuthorAvatarImg,
   RecomAuthorsItemDesc,
   RecomAuthorsGetAll
-} from  "../style";
+} from  "./style";
 
 class RecomAuthors extends Component {
   renderList(item) {

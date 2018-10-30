@@ -5,7 +5,7 @@ import {
   FooterNavItem,
   FooterNav,
   CopyRightInfo
-} from "../style";
+} from "./style";
 
 class Footer extends Component {
   render() {

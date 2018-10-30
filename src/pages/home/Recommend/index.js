@@ -4,7 +4,7 @@ import {
   RecommendWrapper,
   RecommendItem,
   RecommendMoreItem
-} from "../style";
+} from "./style";
 
 class Recommend extends Component {
 
