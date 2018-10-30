@@ -1,5 +1,5 @@
 import { fromJS } from "immutable";
-import { SEARCH_ON_FOCUS, SEARCH_ON_BLUR, SEARCH_ON_MOVE_IN, SEARCH_ON_MOVE_OUT, TOGGLE_POPOVER_MODEL_SHOW, INTI_SRAECH_TREND_LIST, CHANGE_SRAECH_TREND_LIST_PAGENUM } from "./actionTypes";
+import { headerActionTypes } from "./index";
 
 const defaultState = fromJS({
   onSearchFocus: false,
@@ -12,22 +12,22 @@ const defaultState = fromJS({
 
 export default (state = defaultState, action) => {
   switch(action.type) {
-    case SEARCH_ON_FOCUS:
+    case headerActionTypes.SEARCH_ON_FOCUS:
       return state.set("onSearchFocus", true);
-    case SEARCH_ON_BLUR:
+    case headerActionTypes.SEARCH_ON_BLUR:
       return state.set("onSearchFocus", false);
-    case SEARCH_ON_MOVE_IN: 
+    case headerActionTypes.SEARCH_ON_MOVE_IN: 
       return state.set("moveIn", true);
-    case SEARCH_ON_MOVE_OUT: 
+    case headerActionTypes.SEARCH_ON_MOVE_OUT: 
       return state.set("moveIn", false);
-    case TOGGLE_POPOVER_MODEL_SHOW:
+    case headerActionTypes.TOGGLE_POPOVER_MODEL_SHOW:
       return state.set("popoverModelShow", !state.get("popoverModelShow"));
-    case INTI_SRAECH_TREND_LIST: 
+    case headerActionTypes.INTI_SRAECH_TREND_LIST: 
       return state.merge({
         "searchTrendList": action.data,
         "totalPage": action.totalPage
       });
-    case CHANGE_SRAECH_TREND_LIST_PAGENUM:
+    case headerActionTypes.CHANGE_SRAECH_TREND_LIST_PAGENUM:
       return state.set("pageNum",action.pagenum)
     default:
       return state;
