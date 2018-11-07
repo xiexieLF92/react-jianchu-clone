@@ -13,7 +13,7 @@ export const Nav = styled.nav`
 `;
 // 限制宽度的头部导航条
 export const WidthLimit = styled.div`
-  min-width: 768px;
+  min-width: 960px;
   max-width: 1440px;
   margin: 0 auto;
   height: 56px;
