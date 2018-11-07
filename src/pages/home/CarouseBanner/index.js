@@ -177,15 +177,15 @@ class CarouselBanner extends Component {
     e.stopPropagation()
     let el = e.target;
     let dataIndex = Number(el.dataset.index);
+
+    el.classList.remove("left")
+    el.classList.remove("right")
+    el.classList.remove("next")
+    el.classList.remove("prev")
+    
     if(dataIndex === this.state.prevIndex) {
       el.classList.remove("active")
-      el.classList.remove("left")
-      el.classList.remove("right")
     } else {
-      el.classList.remove("left")
-      el.classList.remove("next")
-      el.classList.remove("prev")
-      el.classList.remove("right")
       el.classList.add("active")
     }
     this.setState({
