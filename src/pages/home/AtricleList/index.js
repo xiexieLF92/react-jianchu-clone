@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { homeAction } from "../store";
 
 import {
   CutOffRuleLine,
@@ -61,6 +62,10 @@ class ArticleList extends Component {
       </div>
     )
   }
+  componentWillMount() {
+    const { getArticleList } = this.props;
+    getArticleList()
+  }
 }
 
 const mapState = (state) => ({
@@ -68,7 +73,9 @@ const mapState = (state) => ({
 })
 
 const mapDispatch = (dispatch) => ({
-
+  getArticleList() {
+    dispatch(homeAction.getArticleList())
+  }
 })
 
 export default connect(mapState, mapDispatch)(ArticleList);
