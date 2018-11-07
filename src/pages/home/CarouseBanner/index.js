@@ -20,6 +20,7 @@ class CarouselBanner extends Component {
       direction: "left",
       isComplete: true
     }
+    this.documentVisibilityChange = this.documentVisibilityChange.bind(this);
   }
 
   render() {
@@ -82,33 +83,34 @@ class CarouselBanner extends Component {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    return nextState.Update
+    return nextState.Update;
   }
 
   componentDidMount() {
-    let timer = this.carouselBannerAnimation()
+    let timer = this.carouselBannerAnimation();
     this.setState({
       timer
-    })
-    document.addEventListener("visibilitychange",(e)=> {
-      if(document.hidden) {
-        clearInterval(this.state.timer)
-        this.setState({
-          timer: null
-        })
-      } else {
-        let timer = this.carouselBannerAnimation()
-        this.setState({
-          timer
-        })
-      }
-    })
+    });
+    document.addEventListener("visibilitychange", this.documentVisibilityChange);
   }
 
-  setCarouselInnerHeight() {
-    let el = document.querySelector(".banner-item");
-    this.innerRef.style.height = `${el.offsetHeight}px`;
-    console.log(this.innerRef.offsetWidth)
+  componentWillUnmount() {
+    document.removeEventListener("visibilitychange", this.documentVisibilityChange);
+    clearInterval(this.state.timer);
+  }
+
+  documentVisibilityChange(e) {
+    if(document.hidden) {
+      clearInterval(this.state.timer);
+      this.setState({
+        timer: null
+      })
+    } else {
+      let timer = this.carouselBannerAnimation();
+      this.setState({
+        timer
+      })
+    }
   }
 
   handldPrevCarouselControl(e) {
@@ -168,11 +170,13 @@ class CarouselBanner extends Component {
       })
     })
   }
+
   changeIndicatosBackgroundColor(index,nextIndex) {
     let el = document.querySelectorAll(".banner-indicators");
     el[index].classList.remove("active")
     el[nextIndex].classList.add("active")
   }
+
   transitionEnd(e) {
     e.stopPropagation()
     let el = e.target;
@@ -192,6 +196,7 @@ class CarouselBanner extends Component {
       isComplete: true
     })
   }
+
   handleCarouselIndicatorsItem(e) {
     let nextIndex = Number(e.target.dataset.indexTo);
     let index = this.state.bannerIndex;
@@ -206,6 +211,7 @@ class CarouselBanner extends Component {
     this.changeIndicatosBackgroundColor(index,nextIndex);
     this.changeCarsouselClassname(el, direction, index, nextIndex);
   }
+  
   carouselBannerAnimation() {
     return setInterval(() => {
       let el = document.querySelectorAll(".banner-item");
