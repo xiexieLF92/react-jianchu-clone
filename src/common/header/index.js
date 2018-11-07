@@ -26,6 +26,10 @@ import {
 } from './style';
 
 class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.togglePopoverModelByClick = this.togglePopoverModelByClick.bind(this);
+  }
 
   renderSearchTrend() {
     const { searchTrendList, pageNum } = this.props;
@@ -92,14 +96,18 @@ class Header extends Component {
             </PopoverModel>
           </PopoverModelWrapper>
           <Container>
-            <NavLink className="toLeft active">
-              <i className="iconfont">&#xe786;</i>
-              首页
-            </NavLink>
-            <NavLink className="toLeft">
-              <i className="iconfont">&#xe632;</i>
-              下载App
-            </NavLink>
+            <Link to="/">
+              <NavLink className="toLeft active">
+                <i className="iconfont">&#xe786;</i>
+                首页
+              </NavLink>
+            </Link>
+            <Link to="/download_apps">
+              <NavLink className="toLeft">
+                <i className="iconfont">&#xe632;</i>
+                下载App
+              </NavLink>
+            </Link>
             <NavSearchWrap>
               <CSSTransition
                 in={searchOnFocus}
@@ -150,11 +158,11 @@ class Header extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener("click", (e) => {this.togglePopoverModelByClick(e)})
+    window.addEventListener("click", this.togglePopoverModelByClick)
   }
 
   componentWillUnmount() {
-    window.removeEventListener("click", (e) => {this.togglePopoverModelByClick(e)})
+    window.removeEventListener("click", this.togglePopoverModelByClick)
   }
 }
 
