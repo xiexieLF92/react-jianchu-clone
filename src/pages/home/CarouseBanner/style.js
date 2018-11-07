@@ -3,20 +3,16 @@ import styled from "styled-components";
 export const CarouselBannerWrapper = styled.div`
   position: relative;
   width: 100%;
+  min-height: 270px;
   border-radius: 6px;
   margin-bottom: 35px;
   font-size: 0;
+  overflow: hidden;
   .carousel-control {
-    display: none;
-  }
-  .carousel-indicators {
     display: none;
   }
   &:hover {
     .carousel-control {
-      display: block;
-    }
-    .carousel-indicators {
       display: block;
     }
   }
@@ -24,14 +20,51 @@ export const CarouselBannerWrapper = styled.div`
 export const CarouselBannerInner = styled.div`
   position: relative;
   width: 100%;
+  z-index: 50;
   .banner-item {
-    position: absolute;
-    a {
+    position: relative;
+    display: none;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    transition: left 0.6s ease-in-out;
+    left: 0;
+
+    &.prev ,&.active, &.next {
+      display: block;
+    }
+    &.active {
+      left: 0;
+    }
+    &.next, &.prev {
+      position: absolute;
+      width: 100%;
+      top: 0;
+    }
+    &.next {
+      left: 100%;
+    }
+    &.prev {
+      left: -100%;
+    }
+
+    &.left.active {
+      left: -100%;
+    }
+    &.left.next {
+      left: 0;
+    }
+
+    &.right.active {
+      left: 100%;
+    }
+    &.right.prev {
+      left: 0;
+    }
+
+    img {
       display: block;
       width: 100%;
-      img {
-        width: 100%;
-      }
     }
   }
   &:after {
@@ -52,6 +85,7 @@ export const CarouselControl = styled.div`
   color: #fff;
   text-align: center;
   cursor: pointer;
+  z-index: 50;
   .iconfont {
     display: inline-block;
     line-height: 50px;
@@ -74,13 +108,17 @@ export const CarouselIndicators = styled.ol`
   left: 10%;
   bottom: 20px;
   text-align: center;
+  z-index: 50;
 `
 export const CarouselIndicatorsItem = styled.li`
   display: inline-block;
   width: 25px;
   height: 3px;
   margin: 0 4px;
+  transition: background-color .6s ease-in-out;
   background-color: hsla(0,0%,47%,.4);
-  transition: all .3s ease-in;
   cursor: pointer;
+  &.active {
+    background-color: #fff;
+  }
 `
