@@ -31,6 +31,7 @@ class RecomAuthors extends Component {
   }
   render() {
     let { users, pageNum, totalCount, hangleChangePageNum } = this.props;
+    let newUsers = users.slice((pageNum-1)*5,pageNum*5);
     return (
       <RecomAuthorsWrapper>
         <div className="title">
@@ -42,9 +43,7 @@ class RecomAuthors extends Component {
         </div>
         <ul className="recom-author-list">
           {
-            users.toJS().map((item) => (
-              this.renderList(item)
-            ))
+            newUsers.map((item) => this.renderList(item) )
           }
         </ul>
         <RecomAuthorsGetAll>
@@ -53,6 +52,10 @@ class RecomAuthors extends Component {
         </RecomAuthorsGetAll>
       </RecomAuthorsWrapper>
     );
+  }
+
+  componentDidMount() {
+    this.props.getRecomAuthor()
   }
 }
 
@@ -79,6 +82,9 @@ const mapDispatch = (dispatch) => ({
       pageNum = 1;
     }
     dispatch(homeAction.recomAuthorsListChange(pageNum))
+  },
+  getRecomAuthor() {
+    dispatch(homeAction.getRecomAuthor())
   }
 })
 
