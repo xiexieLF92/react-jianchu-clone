@@ -28,7 +28,7 @@ export const NavLogo = styled.div`
   background-size: contain;
 `
 // 头部注册/写文章按钮
-export const NavBtn = styled.a`
+export const NavBtn = styled.div`
   display: block;
   float: right;
   padding: 0 20px;
@@ -55,7 +55,7 @@ export const NavBtn = styled.a`
   }
 `
 // 导航链接
-export const NavLink = styled.a`
+export const NavLink = styled.div`
   display: block;
   height:  56px;
   box-sizing: border-box;

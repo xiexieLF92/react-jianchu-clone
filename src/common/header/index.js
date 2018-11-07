@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { headerAction } from "./store";
 import { CSSTransition } from "react-transition-group";
+import { Link } from "react-router-dom";
 
 import {
   Nav,
@@ -33,7 +34,7 @@ class Header extends Component {
       newList.map(item => {
         return (
           <NavSearchTrendList key={item}>
-            <a href>{item}</a>
+            <a href="">{item}</a>
           </NavSearchTrendList>
         )
       })
@@ -57,13 +58,19 @@ class Header extends Component {
     return  (
       <Nav>
         <WidthLimit>
-          <NavLogo></NavLogo>
+          <Link to="/">
+            <NavLogo></NavLogo>
+          </Link>
           <NavBtn className="red">
             <i className="iconfont">&#xe62d;</i>
             写文章
           </NavBtn>
-          <NavBtn className="primary">注册</NavBtn>
-          <NavLink className="toRight">登录</NavLink>
+          <Link to="/loginReg/register">
+            <NavBtn className="primary">注册</NavBtn>
+          </Link>
+          <Link to="/loginReg/login">
+            <NavLink className="toRight">登录</NavLink>
+          </Link>
           <PopoverModelWrapper>
             <NavLink className="toRight wrapper" onClick={togglePopoverModelShow}>
               <i className="iconfont">&#xe636;</i>
@@ -90,7 +97,7 @@ class Header extends Component {
               首页
             </NavLink>
             <NavLink className="toLeft">
-              <i className="iconfont">&#xe63e;</i>
+              <i className="iconfont">&#xe632;</i>
               下载App
             </NavLink>
             <NavSearchWrap>
