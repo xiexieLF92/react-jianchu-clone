@@ -4,7 +4,6 @@ export const HomeWrapper = styled.div`
   display: flex;
   width: 960px;
   margin: 57px auto 0;
-  height: 300px;
   padding: 30px 0 0;
 `
 
