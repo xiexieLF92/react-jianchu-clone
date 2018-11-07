@@ -16,7 +16,7 @@ class AsideTools extends Component {
     return (
       <AsideToolWrapper visibal={this.state.visibal}>
         <AsideToolList>
-          <AsideToolItem>
+          <AsideToolItem onClick={ e => {this.handleScrollTopToZero(e)} }>
             <i className="iconfont">&#xe608;</i>
           </AsideToolItem>
         </AsideToolList>
@@ -33,6 +33,20 @@ class AsideTools extends Component {
       this.setState({
         visibal: false
       })
+    }
+  }
+  handleScrollTopToZero(e) {
+    let height = document.documentElement.scrollTop;
+    let counts = Math.ceil(height/(60*0.5));
+    window.requestAnimationFrame(() => {this.scrollTopToZero(height, counts)});
+  }
+  scrollTopToZero(height, counts) {
+    if(height > counts) {
+      height -= counts;
+      document.documentElement.scrollTop = height;
+      window.requestAnimationFrame(() => {this.scrollTopToZero(height, counts)})
+    } else {
+      document.documentElement.scrollTop = 0;
     }
   }
   componentDidMount() {
