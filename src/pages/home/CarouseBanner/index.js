@@ -99,7 +99,7 @@ class CarouselBanner extends Component {
     clearInterval(this.state.timer);
   }
 
-  documentVisibilityChange(e) {
+  documentVisibilityChange(e) { // 离开/进入本页面触发事件
     if(document.hidden) {
       clearInterval(this.state.timer);
       this.setState({
@@ -113,7 +113,7 @@ class CarouselBanner extends Component {
     }
   }
 
-  handldPrevCarouselControl(e) {
+  handldPrevCarouselControl(e) {  // 点击轮播图左侧控件
     e.stopPropagation()
     if(!this.state.isComplete) return;
     let direction = "right";
@@ -130,7 +130,7 @@ class CarouselBanner extends Component {
     this.changeCarsouselClassname(el, direction, index, nextIndex);
   }
 
-  handldNextCarouselControl(e) {
+  handldNextCarouselControl(e) {  // 点击轮播图右侧控件
     e.stopPropagation()
     if(!this.state.isComplete) return;
     let direction = "left";
@@ -146,7 +146,7 @@ class CarouselBanner extends Component {
     this.changeIndicatosBackgroundColor(index,nextIndex);
     this.changeCarsouselClassname(el, direction, index, nextIndex);
   }
-  changeCarsouselClassname(el, direction, index, nextIndex) {
+  changeCarsouselClassname(el, direction, index, nextIndex) { // 通过改变class实现轮播效果
     let timer = this.state.timer;
     clearInterval(timer);
     let perTimer = null;
@@ -158,7 +158,7 @@ class CarouselBanner extends Component {
     perTimer = setTimeout(() => {
       el[index].classList.add(direction);
       el[nextIndex].classList.add(direction);
-      clearTimeout(perTimer)
+      clearTimeout(perTimer);
       let newTimer = this.carouselBannerAnimation();
       this.setState({
         bannerIndex: nextIndex,
@@ -171,14 +171,14 @@ class CarouselBanner extends Component {
     })
   }
 
-  changeIndicatosBackgroundColor(index,nextIndex) {
+  changeIndicatosBackgroundColor(index,nextIndex) { // 轮播图指示器背景颜色改变
     let el = document.querySelectorAll(".banner-indicators");
-    el[index].classList.remove("active")
-    el[nextIndex].classList.add("active")
+    el[index].classList.remove("active");
+    el[nextIndex].classList.add("active");
   }
 
-  transitionEnd(e) {
-    e.stopPropagation()
+  transitionEnd(e) {  // 过度结束事件
+    e.stopPropagation();
     let el = e.target;
     let dataIndex = Number(el.dataset.index);
 
@@ -188,37 +188,37 @@ class CarouselBanner extends Component {
     el.classList.remove("prev")
     
     if(dataIndex === this.state.prevIndex) {
-      el.classList.remove("active")
+      el.classList.remove("active");
     } else {
-      el.classList.add("active")
+      el.classList.add("active");
     }
     this.setState({
       isComplete: true
     })
   }
 
-  handleCarouselIndicatorsItem(e) {
+  handleCarouselIndicatorsItem(e) { // 点击轮播图指示器跳转到指定图片
     let nextIndex = Number(e.target.dataset.indexTo);
     let index = this.state.bannerIndex;
     if(index === nextIndex || !this.state.isComplete) return;
     let direction = null;
     if(nextIndex < index) {
-      direction = "right"
+      direction = "right";
     } else {
-      direction = "left"
+      direction = "left";
     }
     let el = document.querySelectorAll(".banner-item");
     this.changeIndicatosBackgroundColor(index,nextIndex);
     this.changeCarsouselClassname(el, direction, index, nextIndex);
   }
   
-  carouselBannerAnimation() {
+  carouselBannerAnimation() { // 轮播图定时器，实现自动轮播
     return setInterval(() => {
       let el = document.querySelectorAll(".banner-item");
       let direction = "left";
       let length = el.length;
       let index = this.state.bannerIndex;
-      let nextIndex = null
+      let nextIndex = null;
       if (index === length - 1) {
         nextIndex = 0;
       } else {
