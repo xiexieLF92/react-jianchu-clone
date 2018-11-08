@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import { homeAction } from "../store";
 
 import {
@@ -46,10 +47,12 @@ class RecomAuthors extends Component {
             newUsers.map((item) => this.renderList(item) )
           }
         </ul>
-        <RecomAuthorsGetAll>
-          <span>查看全部</span>
-          <i className="iconfont">&#xe604;</i>
-        </RecomAuthorsGetAll>
+        <Link to="/recommendauthor">
+          <RecomAuthorsGetAll>
+            <span>查看全部</span>
+            <i className="iconfont">&#xe604;</i>
+          </RecomAuthorsGetAll>
+        </Link>
       </RecomAuthorsWrapper>
     );
   }
