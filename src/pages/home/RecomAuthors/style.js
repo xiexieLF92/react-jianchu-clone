@@ -80,8 +80,9 @@ export const RecomAuthorsItemDesc = styled.div`
   }
 `
 // 查看全部作者
-export const RecomAuthorsGetAll = styled.a`
+export const RecomAuthorsGetAll = styled.div`
   display: flex;
+  box-sizing: border-box;
   justify-content: center;
   align-items: center;
   padding: 7px 7px 7px 12px;
