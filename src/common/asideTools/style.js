@@ -18,6 +18,7 @@ export const AsideToolItem = styled.li`
   height: 50px;
   text-align: center;
   border: 1px solid #dcdcdc;
+  background: #fff;
   border-bottom: none;
   &:last-child {
     border-bottom: 1px solid #dcdcdc;
