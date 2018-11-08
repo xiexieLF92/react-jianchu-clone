@@ -1,0 +1,152 @@
+{
+  "success": true,
+  "data": {
+    "logoImgSrc": "http://cdn2.jianshu.io/assets/web/recommend-author-03cc8798d5cc3f986e49cbcb2eb63079.png",
+    "recommendAuthorList": [
+      {
+        "avatar": "http://upload.jianshu.io/users/upload_avatars/3136195/484e32c3504a.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/180/h/180",
+        "name": "lostdays",
+        "sex": 0,
+        "description": "不看投稿须知被拒稿的，不给理由，亦不予回复。",
+        "follow": false,
+        "recentUpdate": [
+          "约",
+          "日出之城 九",
+          "女孩"
+        ]
+      },
+      {
+        "avatar": "http://upload.jianshu.io/users/upload_avatars/6305091/dc5b863a-26fc-47df-af32-18177f6cc9ff.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/180/h/180",
+        "name": "只有一半影子的人",
+        "sex": null,
+        "description": "名字灵感来自村上春树《海边的卡夫卡》里的那个...",
+        "follow": false,
+        "recentUpdate": [
+          "提前的结局",
+          "双相障碍的治疗进展(书摘1)",
+          "躁狂面具VS.抑郁面具"
+        ]
+      },
+      {
+        "avatar": "http://upload.jianshu.io/users/upload_avatars/3136195/484e32c3504a.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/180/h/180",
+        "name": "梅拾璎",
+        "sex": 1,
+        "description": "打马跃青山，长河扬其波 。     爱皎...",
+        "follow": false,
+        "recentUpdate": [
+          "爱，本质上是一场自我教育",
+          "对日本文化的一点直觉",
+          "“爸爸，别看手机了，咱们踩影子玩吧”"
+        ]
+      },
+      {
+        "avatar": "http://upload.jianshu.io/users/upload_avatars/3730494/4a86a2a7-d5b9-47f1-969a-d8ef4711488b.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/180/h/180",
+        "name": "格列柯南",
+        "sex": 0,
+        "description": "经济学本科，哲学硕士，博士攻读历史，现研习演...",
+        "follow": false,
+        "recentUpdate": [
+          "《查理五世卷二·第10章》马丁·路德",
+          "《查理五世卷二·第9章》托尔德西里亚斯",
+          "戴维·斯隆·威尔逊：利他主义存在吗？"
+        ]
+      },
+      {
+        "avatar": "http://upload.jianshu.io/users/upload_avatars/3343569/3cd46650-54bc-4383-989f-80aacb0c42fe.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/180/h/180",
+        "name": "吴晓布",
+        "sex": null,
+        "description": "顺丰速运集团前高管，目前从事互联网行业，创业...",
+        "follow": false,
+        "recentUpdate": [
+          "让你的文字像画一样好看像音乐一样好听",
+          "我眼里的简书钻",
+          "西藏阿里大北线 | 风光高清手机壁纸"
+        ]
+      },
+      {
+        "avatar": "http://upload.jianshu.io/users/upload_avatars/5545154/1a3d5ed6-9ad1-44b3-9457-3e6a29dd1b71.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/180/h/180",
+        "name": "徐林Grace",
+        "sex": 1,
+        "description": "•全球营养专家，时尚妈咪特邀世界级营养专家，...",
+        "follow": false,
+        "recentUpdate": [
+          "朝圣yatra12: 用一生都看不完的印度历史书！恒河里浸泡自己7次就洁净了吗？",
+          "朝圣yatra11：满月的能量强大到打通所有脉轮！阿汤达人们各种怪癖！",
+          "朝圣yatra10：美妙绝伦和糟糕透顶都体验到了！上帝派来的使者主动找到我！"
+        ]
+      },
+      {
+        "avatar": "http://upload.jianshu.io/users/upload_avatars/2844887/cf3b6f90-774a-4ea7-9e59-b29f2f4b7ad6.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/180/h/180",
+        "name": "红瑀",
+        "sex": 1,
+        "description": "如果你在生活中真的很重视什么东西，那就竭尽全...",
+        "follow": false,
+        "recentUpdate": [
+          "《创业时代》和《未生》",
+          "职场小说是新尝试",
+          "我在写短篇小说"
+        ]
+      },
+      {
+        "avatar": "http://upload.jianshu.io/users/upload_avatars/8972166/065e6770-aacc-4365-9abf-c46a59cdf7f6.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/180/h/180",
+        "name": "冰千里",
+        "sex": null,
+        "description": "私人执业心理咨询师重度孤独爱好者...",
+        "follow": false,
+        "recentUpdate": [
+          "一位来访者的内心独白(上)",
+          "金庸辞世：有一种体验，叫丧失",
+          "李咏离世：面对死亡，我们恐惧的究竟是什么？"
+        ]
+      },
+      {
+        "avatar": "http://upload.jianshu.io/users/upload_avatars/4802366/4f86b75d-b61b-4126-8be4-87a151c9cd28.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/180/h/180",
+        "name": "汪波_偶遇科学",
+        "sex": null,
+        "description": "偶遇科学，携手人文。喜欢探求事物背后...",
+        "follow": false,
+        "recentUpdate": [
+          "1.5 永远的鸽群：时间的延续",
+          "真可惜，真幸运",
+          "1.4 横着切牛肉：学科的联系"
+        ]
+      },
+      {
+        "avatar": "http://upload.jianshu.io/users/upload_avatars/12665193/828a449f-efbb-4540-b0af-f6c314810515.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/180/h/180",
+        "name": "宇文歡",
+        "sex": 0,
+        "description": "既编过学术大作，也做过畅销小说。策划过最畅销...",
+        "follow": false,
+        "recentUpdate": [
+          "丝绸之路密码 · 天山秘径28  山间古堡",
+          "丝绸之路密码 · 天山秘径27  天降重任",
+          "丝绸之路密码 · 天山秘径26  玉机的秘密"
+        ]
+      },
+      {
+        "avatar": "http://upload.jianshu.io/users/upload_avatars/13213889/7314c5cc-ca7f-4542-b914-2c8dffaf324d.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/180/h/180",
+        "name": "无限猴子",
+        "sex": null,
+        "description": "一只有限写作的无限猴子~",
+        "follow": false,
+        "recentUpdate": [
+          "感官少年的咏叹调2.3.2邪种监狱",
+          "感官少年的咏叹调2.3.1邪种监狱",
+          "感官少年的咏叹调2.2.4她的口味"
+        ]
+      },
+      {
+        "avatar": "http://upload.jianshu.io/users/upload_avatars/5205317/1179d71b-e7c6-4023-89e8-bba25f88272b.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/180/h/180",
+        "name": "遛遛心情的溜妈",
+        "sex": null,
+        "description": "溜爸，简书签约作者，舞枪弄棒、舞文弄墨的计算...",
+        "follow": false,
+        "recentUpdate": [
+          "［奇幻］唐朝那些猫事儿（101）",
+          "［奇幻］唐朝那些猫事儿（100）",
+          "那个跟狗屎说再见的孩子……"
+        ]
+      }
+    ]
+  }
+}
