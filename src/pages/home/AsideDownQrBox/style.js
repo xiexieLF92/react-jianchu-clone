@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const AsideDownWrapper = styled.a`
+export const AsideDownWrapper = styled.div`
   display: flex;
   position: relative;
   align-items: center;
