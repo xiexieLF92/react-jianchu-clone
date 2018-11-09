@@ -2,14 +2,14 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { headerAction } from "./store";
 import { CSSTransition } from "react-transition-group";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 import {
   Nav,
   WidthLimit,
   NavLogo,
   NavBtn,
-  NavLink,
+  NavLinkTo,
   PopoverModelWrapper,
   PopoverModel,
   SwitchMeta,
@@ -73,12 +73,12 @@ class Header extends Component {
             <NavBtn className="primary">注册</NavBtn>
           </Link>
           <Link to="/loginReg/login">
-            <NavLink className="toRight">登录</NavLink>
+            <NavLinkTo className="toRight">登录</NavLinkTo>
           </Link>
           <PopoverModelWrapper>
-            <NavLink className="toRight wrapper" onClick={togglePopoverModelShow}>
+            <NavLinkTo className="toRight wrapper" onClick={togglePopoverModelShow}>
               <i className="iconfont">&#xe636;</i>
-            </NavLink>
+            </NavLinkTo>
             <PopoverModel visibal={popoverModelShow} onClick={(e) => {this.popoverModelShowClick(e)}}>
               <SwitchMeta>
                 <i className="iconfont">&#xe643;</i>  
@@ -96,18 +96,18 @@ class Header extends Component {
             </PopoverModel>
           </PopoverModelWrapper>
           <Container>
-            <Link to="/">
-              <NavLink className="toLeft active">
+            <NavLink to="/" exact activeClassName="active">
+              <NavLinkTo className="toLeft">
                 <i className="iconfont">&#xe786;</i>
                 首页
-              </NavLink>
-            </Link>
-            <Link to="/download_apps">
-              <NavLink className="toLeft">
+              </NavLinkTo>
+            </NavLink>
+            <NavLink to="/download_apps" exact activeClassName="active">
+              <NavLinkTo className="toLeft">
                 <i className="iconfont">&#xe632;</i>
                 下载App
-              </NavLink>
-            </Link>
+              </NavLinkTo>
+            </NavLink>
             <NavSearchWrap>
               <CSSTransition
                 in={searchOnFocus}

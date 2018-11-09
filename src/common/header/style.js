@@ -55,7 +55,7 @@ export const NavBtn = styled.div`
   }
 `
 // 导航链接
-export const NavLink = styled.div`
+export const NavLinkTo = styled.div`
   display: block;
   height:  56px;
   box-sizing: border-box;
@@ -67,11 +67,11 @@ export const NavLink = styled.div`
     float: left;
     color: #333;
     margin-right: 15px;
-    &.active {
-      color: #ea6f5a;
-    }
     .iconfont {
       margin-right: 5px;
+    }
+    &:hover {
+      background: #f5f5f5;
     }
   }
   &.toRight {
@@ -87,6 +87,14 @@ export const Container = styled.div`
   height: 56px;
   padding: 0 15px;
   margin: 0 auto;
+  .active {
+    .toLeft {
+      color: #ea6f5a!important;
+      &:hover {
+        background: none;
+      }
+    }
+  }
 `
 // 顶部搜索框wrap
 export const NavSearchWrap = styled.div`
