@@ -147,6 +147,12 @@ class CarouselBanner extends Component {
     this.changeCarsouselClassname(el, direction, index, nextIndex);
   }
   changeCarsouselClassname(el, direction, index, nextIndex) { // 通过改变class实现轮播效果
+    el[index].classList.remove("right");
+    el[index].classList.remove("left");
+    el[nextIndex].classList.remove("prev");
+    el[nextIndex].classList.remove("next");
+    el[nextIndex].classList.remove("left");
+    el[nextIndex].classList.remove("right");
     let timer = this.state.timer;
     clearInterval(timer);
     let perTimer = null;
