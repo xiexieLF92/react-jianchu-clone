@@ -89,6 +89,9 @@ class DownloadApps extends Component {
       </AppsWrapper>
     )
   }
+  componentDidMount() {
+    document.documentElement.scrollTop = 0;
+  }
 }
 
 export default DownloadApps;

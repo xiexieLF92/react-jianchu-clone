@@ -32,6 +32,9 @@ class Home extends Component {
       </HomeWrapper>
     );
   }
+  componentDidMount() {
+    document.documentElement.scrollTop = 0;
+  }
 }
 
 export default Home;

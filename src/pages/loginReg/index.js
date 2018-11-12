@@ -136,6 +136,7 @@ class Login extends Component {
   }
   componentDidMount() {
     console.log(this.props,this.state)
+    document.documentElement.scrollTop = 0;
     window.addEventListener("click",  e => {this.handleOnClose(e)})
   }
   componentWillUnmount() {
